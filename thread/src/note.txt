@@ -1,0 +1,51 @@
+实现多线程方式：
+Callable 接口  Thread类   Runnable接口
+
+  （1）Callable规定的方法是call()，而Runnable规定的方法是run().
+  （2）Callable的任务执行后可返回值，而Runnable的任务是不能返回值的。
+  （3）call()方法可抛出异常，而run()方法是不能抛出异常的。
+  //1.执行 Callable 方式，需要 FutureTask 实现类的支持，用于接收运算结果。
+   ThreadDemo td = new ThreadDemo();
+   FutureTask<Integer> result = new FutureTask<>(td);
+   new Thread(result).start();
+===========================================================
+wait和sleep方法的不同:
+
+最大的不同是在等待时wait会释放锁，而sleep一直持有锁。
+Wait通常被用于线程间交互，sleep通常被用于暂停执行。
+
+wait()是object中的方法  sleep()是thread中的方法
+
+object方法: hashCode()、equals()  String重写了equals方法、toString、 notify 、notifyAll、wait、finalize、 clone
+
+==========================================================
+
+- Java的多线程锁是挂在对象上的，并不是在方法上的。即每个对象都有一个锁，当遇到类似synchronized的同步需要时，
+就会监视(monitor)每个想使用本对象的线程按照一定的规则来访问，规则也就是在同一时间内只能有一个线程能访问此对象。
+
+- Java中获取锁的单位是线程。当线程A获取了对象B的锁，也就是对象B的持有标记上写的是线程A的唯一标识，
+在需要同步的情况下的话，只有线程A能访问对象B。
+
+- Thread常用方法有：start/stop/yield/sleep/interrupt/join等，他们是线程级别的方法，
+所以并不会太关心锁的具体逻辑。
+
+- Object的线程有关方法是：wait/wait(事件参数)/notify/notifyAll，他们是对象的方法，
+所以使用的时候就有点憋屈了，必须当前线程获取了本对象的锁才能使用，否则会报异常。但他们能更细粒度的控制锁
+，可以释放锁。
+
+=====================================================
+run()、start() 理解
+
+run()方法 Thread抽象类底层实现是调用Runnable接口中的run方法
+start()方法  Thread抽象类调用ThreadGroup类中的add(this)方法，将当前对象加入到线程组中启动线程
+
+=====================================================
+synchronized：
+静态同步函数的锁是class对象  ：单例模式的懒汉式双重检查加锁
+同步函数的锁是this :synchronized(this){}
+
+加锁的方式：
+1. synchronized关键字
+2. Java.util.concurrent包中的lock接口和ReentrantLock实现类
+
+======================================================

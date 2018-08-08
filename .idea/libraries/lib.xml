@@ -1,0 +1,23 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://D:/工具包/SSHjar包/gson/gson-2.8.0.jar!/" />
+      <root url="jar://D:/工具包/poi-bin-3.17-20170915/poi-3.17/poi-3.17.jar!/" />
+      <root url="jar://D:/工具包/poi-bin-3.17-20170915/poi-3.17/poi-ooxml-3.17.jar!/" />
+      <root url="jar://D:/工具包/poi-bin-3.17-20170915/poi-3.17/poi-ooxml-schemas-3.17.jar!/" />
+      <root url="jar://D:/工具包/poi-bin-3.17-20170915/poi-3.17/poi-scratchpad-3.17.jar!/" />
+      <root url="jar://D:/工具包/poi-bin-3.17-20170915/poi-3.17/poi-excelant-3.17.jar!/" />
+      <root url="jar://D:/工具包/poi-bin-3.17-20170915/poi-3.17/poi-examples-3.17.jar!/" />
+      <root url="jar://D:/工具包/poi-bin-3.17-20170915/poi-3.17/ooxml-lib/xmlbeans-2.6.0.jar!/" />
+      <root url="jar://D:/工具包/poi-bin-3.17-20170915/poi-3.17/ooxml-lib/curvesapi-1.04.jar!/" />
+      <root url="jar://D:/工具包/poi-bin-3.17-20170915/poi-3.17/lib/commons-collections4-4.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://D:/工具包/SSHjar包/gson/gson-2.8.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/design/src" />
+      <root url="jar://D:/工具包/SSHjar包/gson/gson-2.8.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

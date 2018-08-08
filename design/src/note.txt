@@ -1,0 +1,15 @@
+1.适配器模式
+把一个类的接口变换成客户端所能接受的另一种接口，从而使两个接口不匹配而无法在一起工作的两个类能够在一起工作.
+InputStreamReader和OutputStreamWriter就是适配器的体现。
+InputStreamReader实现了Reader接口，并且持有InputStream的引用，其作用是将InputStream适配到Reader。
+源角色就是InputStream代表的实例对象，目标角色就是Reader类。
+
+2.装饰器模式：
+使得被装饰者功能更强大，而且装饰前后的使用方式不变
+InputStream类是以抽象组件的形式存在，而FileInputStream就是具体组件，
+它实现了抽象接口的所有方法，并且持有InputStream对象的引用。
+FileInputStream就是一个装饰类，而BufferInputStream是这个装饰类的具体实现者，
+它给InputStream加入了新的功能，使得InputStream读取的数据保存在内存中，从而提高读取性能。
+
+3.观察者模式:
+Servlet实例的创建、Session的管理
